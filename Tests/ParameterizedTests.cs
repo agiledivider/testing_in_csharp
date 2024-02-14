@@ -13,7 +13,7 @@ public class ParameterizedTests
 
         var result = sut.Add(value1, value2);
         
-        Assert.Equal(expected, result);
+        result.Should().Be(expected);
     }
     
     [Theory (Skip = "lets see how that works")]
@@ -24,7 +24,7 @@ public class ParameterizedTests
 
         var result = calculator.Add(value1, value2);
 
-        Assert.Equal(expected, result);
+        expected.Should().Be(result);
     }
 
     public static IEnumerable<object[]> Data =>
