@@ -1,13 +1,13 @@
 namespace Tests;
 
-public class ParameterizedTests
+public class Parameterized_Tests
 {
     [Theory]
     [InlineData(1,1,2)]
     [InlineData(2,2,4)]
     [InlineData(33,33,66)]
-    //[InlineData(7,3,10)]
-    public void WithInlineData(int value1, int value2, int expected)
+    [InlineData(7,3,10)]
+    public void With_Inline_Data(int value1, int value2, int expected)
     {
         var sut = new Calculator();
 
@@ -16,7 +16,7 @@ public class ParameterizedTests
         result.Should().Be(expected);
     }
     
-    [Theory (Skip = "lets see how that works")]
+    [Theory]
     [MemberData(nameof(Data))]
     public void WithMemberData(int value1, int value2, int expected)
     {

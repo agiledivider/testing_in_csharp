@@ -1,11 +1,11 @@
 namespace Tests;
 
-public class BasicTest
+public class Basic_Test
 {
     [Fact]
-    public void BasicAssertion()
+    public void Basic_Assertion() 
     {
-        Assert.True(true);
+        Assert.True(false);
     }
 
 }
